@@ -5,15 +5,19 @@ public class Main{
 
     public static void main(String[] args) {
         Novice mynovice = new Novice();
+        Swordman myswordman = new Swordman();
+        Magician mymagician = new Magician();
         String newname;
+        int job;
         int action=0;
+        int mageaction=0;
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter your name: ");
         newname = scan.next();
         mynovice.insertName(newname);
         mynovice.status();
 
-        while(mynovice.yourHP() >= 0){
+        while(mynovice.yourHP() >= 0 ){
             System.out.println("What do you want to do ?");
             System.out.println("1.Dungeon");
             System.out.println("2.Sleep");
@@ -49,6 +53,6 @@ public class Main{
             }
             mynovice.status();
         }
+    if(mynovice.yourHP() <= 0)    
         System.out.println("YOU DIED!");
-    }
-}
+    }}
